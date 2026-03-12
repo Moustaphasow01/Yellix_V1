@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-midnight: #08131f;
+  --color-ivory: #f7f9fc;
+  --color-graphite: #1f2937;
+  --color-slate: #6b7280;
+  --color-accent: #00bfa5;
+  --color-accent-soft: #dff9f5;
+  --color-border: rgba(8, 19, 31, 0.08);
+  --color-border-strong: rgba(8, 19, 31, 0.16);
+  --color-surface: rgba(255, 255, 255, 0.8);
+  --color-panel-soft: #f2f5f8;
+  --color-sector-telecom: #2f6bff;
+  --color-sector-energy: #f5a623;
+  --color-sector-agri: #2e8b57;
+  --color-sector-livestock: #7c9a3d;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    min-height: 100vh;
+    background:
+      radial-gradient(circle at top left, rgba(0, 191, 165, 0.08), transparent 24%),
+      linear-gradient(180deg, #f7f9fc 0%, #edf3f8 100%);
+    color: var(--color-graphite);
+    font-family: var(--font-body), sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--color-midnight);
+    font-family: var(--font-heading), sans-serif;
+    letter-spacing: -0.04em;
+  }
+
+  a,
+  button,
+  input,
+  textarea,
+  select {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  ::selection {
+    background: rgba(0, 191, 165, 0.18);
+    color: var(--color-midnight);
+  }
+}
+
+@layer utilities {
+  .container-shell {
+    width: min(100%, 1280px);
+    margin-inline: auto;
+    padding-inline: clamp(1.25rem, 3vw, 2rem);
+  }
+
+  .section-space {
+    padding-block: 3.25rem;
+  }
+
+  @media (min-width: 768px) {
+    .section-space {
+      padding-block: 4.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .section-space {
+      padding-block: 6rem;
+    }
+  }
+
+  .card-surface {
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
+    box-shadow: 0 18px 50px rgba(8, 19, 31, 0.08);
+    backdrop-filter: blur(12px);
+  }
+
+  .premium-outline {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .premium-outline::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    pointer-events: none;
+  }
+
+  .tech-grid-light {
+    background-image:
+      linear-gradient(rgba(8, 19, 31, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(8, 19, 31, 0.05) 1px, transparent 1px);
+    background-size: 52px 52px;
+  }
+
+  .tech-grid-dark {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+    background-size: 52px 52px;
+  }
+
+  .section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+    border-radius: 999px;
+    border: 1px solid rgba(0, 191, 165, 0.2);
+    background: rgba(0, 191, 165, 0.08);
+    padding: 0.45rem 0.8rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    line-height: 1.02;
+  }
+
+  .section-copy {
+    max-width: 42rem;
+    font-size: clamp(1rem, 1.5vw, 1.1rem);
+    line-height: 1.8;
+    color: var(--color-slate);
+  }
+
+  .field-shell {
+    width: 100%;
+    border-radius: 1rem;
+    border: 1px solid var(--color-border);
+    background: rgba(255, 255, 255, 0.92);
+    padding: 0.95rem 1rem;
+    font-size: 0.95rem;
+    color: var(--color-midnight);
+    transition:
+      border-color 180ms ease,
+      box-shadow 180ms ease,
+      transform 180ms ease;
+  }
+
+  .field-shell:focus {
+    border-color: rgba(0, 191, 165, 0.45);
+    box-shadow: 0 0 0 4px rgba(0, 191, 165, 0.12);
+    outline: none;
+  }
+
+  .dark-panel {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04)),
+      rgba(255, 255, 255, 0.04);
+    box-shadow: 0 24px 80px rgba(3, 8, 16, 0.35);
+    backdrop-filter: blur(14px);
+  }
+
+  .subtle-divider {
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(90deg, transparent, var(--color-border-strong), transparent);
+  }
+}
