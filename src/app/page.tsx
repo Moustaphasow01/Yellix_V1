@@ -4,6 +4,7 @@ import { Check } from "lucide-react";
 import Image from "next/image";
 import { createMetadata } from "@/lib/metadata";
 import { iconMap } from "@/lib/icon-map";
+import { assetPath } from "@/lib/asset-path";
 import { heroCapabilities, servicePillars, whyYellix } from "@/data/site";
 import { HomeSectorShowcase } from "@/components/home-sector-showcase";
 
@@ -20,7 +21,7 @@ export default function Home() {
         <div className="tech-grid-dark absolute inset-0 opacity-25" />
         <div className="absolute -top-8 left-0 h-72 w-72 rounded-full bg-[rgba(0,191,165,0.05)] blur-[110px] md:-top-10 md:h-[22rem] md:w-[22rem]" />
         <Image
-          src="/images/antenna.webp"
+          src={assetPath("/images/antenna.webp")}
           alt="Infrastructure télécom avec antennes et équipements réseau"
           fill
           priority
@@ -131,7 +132,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-[minmax(16rem,0.77fr)_minmax(0,1.23fr)]">
             <div className="relative min-h-[21rem] bg-[var(--color-midnight)]">
               <Image
-                src="/images/panneaux-photovoltaiques.jpg"
+                src={assetPath("/images/panneaux-photovoltaiques.jpg")}
                 alt="Panneaux photovoltaïques"
                 fill
                 sizes="(max-width: 1024px) 100vw, 42vw"

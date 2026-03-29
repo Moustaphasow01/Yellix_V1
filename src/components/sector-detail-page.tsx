@@ -3,6 +3,7 @@ import { ButtonLink } from "@/components/button-link";
 import { Reveal } from "@/components/reveal";
 import type { Sector } from "@/data/site";
 import { iconMap } from "@/lib/icon-map";
+import { assetPath } from "@/lib/asset-path";
 
 type SectorDetailPageProps = {
   sector: Sector;
@@ -19,13 +20,13 @@ const sectorVisuals: Record<
 > = {
   telecommunications: {
     label: "Infrastructures réseau",
-    image: "/images/antenna.webp",
+    image: assetPath("/images/antenna.webp"),
     alt: "Infrastructure télécom avec antennes et équipements réseau",
     imagePosition: "object-[18%_40%]",
   },
   energie: {
     label: "Installations énergétiques",
-    image: "/images/panneaux-photovoltaiques.jpg",
+    image: assetPath("/images/panneaux-photovoltaiques.jpg"),
     alt: "Panneaux photovoltaïques dans un environnement technique",
     imagePosition: "object-[62%_38%]",
   },
