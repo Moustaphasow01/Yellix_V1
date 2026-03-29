@@ -23,7 +23,7 @@ export default function AboutPage() {
         description="Yellix Group intervient sur des environnements stratégiques avec une approche sobre, structurée et opérationnelle."
         highlights={[
           { label: "Secteurs", value: "4 environnements" },
-          { label: "Services", value: "7 expertises" },
+          { label: "Services", value: "9 expertises" },
           { label: "Ancrage", value: "Sénégal" },
         ]}
       />
@@ -85,9 +85,6 @@ export default function AboutPage() {
                 <article className="h-full rounded-[24px] border border-[var(--color-border)] bg-white p-5 shadow-[0_16px_40px_rgba(8,19,31,0.05)]">
                   <IconBadge icon={value.icon} className="h-10 w-10 rounded-[16px]" iconClassName="h-4 w-4" />
                   <h3 className="mt-4 text-[1.3rem]">{value.title}</h3>
-                  <p className="mt-2.5 text-[0.9rem] leading-6 text-[var(--color-slate)]">
-                    {value.description}
-                  </p>
                 </article>
               </Reveal>
             ))}

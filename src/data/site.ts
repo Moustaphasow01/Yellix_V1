@@ -49,35 +49,31 @@ export type ServicePillar = {
 };
 
 export const siteNavigation: NavigationItem[] = [
-  { label: "Accueil", href: "/" },
-  { label: "À propos", href: "/a-propos" },
-  { label: "Secteurs d’activité", href: "/secteurs" },
-  { label: "Services", href: "/services" },
-  { label: "Expérience", href: "/experience" },
-  { label: "Contact", href: "/contact" },
+  { label: "À propos", href: "/" },
+  { label: "Yellix Shop", href: "/shop" },
 ];
 
 export const keyMetrics: Metric[] = [
   {
-    label: "Secteurs stratégiques",
+    label: "Secteurs couverts",
     detail: "Télécommunications, énergie, agriculture et élevage.",
     value: 4,
   },
   {
-    label: "Offres de services",
-    detail: "Une chaîne complète, de l'audit à l'accompagnement long terme.",
-    value: 7,
+    label: "Services mobilisables",
+    detail: "Audit, ingénierie, déploiement, maintenance, exploitation, support, conseil et solaire.",
+    value: 9,
   },
   {
     label: "Expérience cumulée",
-    detail: "Une profondeur métier mobilisable sur des environnements exigeants.",
+    detail: "Une expérience mobilisée sur des opérations techniques, multi-sites et multisectorielles.",
     value: 22,
     suffix: "+",
   },
   {
-    label: "Zones d’intervention",
-    detail: "Couverture multi-sites pour des opérations terrain et techniques.",
-    display: "Multi-zones",
+    label: "Couverture territoriale",
+    detail: "Présence opérationnelle dans les 14 régions du Sénégal.",
+    display: "14 régions",
   },
 ];
 
@@ -85,25 +81,42 @@ export const contactDetails = {
   email: "contact@yellix.com",
   phone: "+221 77 637 94 69",
   address: "Coordonnées administratives communiquées sur demande",
-  zone: "Interventions multi-sites et environnements stratégiques",
+  zone: "Présence dans les 14 régions du Sénégal",
 };
+
+export const coverageRegions = [
+  "Dakar",
+  "Diourbel",
+  "Fatick",
+  "Kaffrine",
+  "Kaolack",
+  "Kédougou",
+  "Kolda",
+  "Louga",
+  "Matam",
+  "Saint-Louis",
+  "Sédhiou",
+  "Tambacounda",
+  "Thiès",
+  "Ziguinchor",
+];
 
 export const heroCapabilities: HeroCapability[] = [
   {
     title: "Expérience",
-    description: "22 ans cumulés au service d’environnements à forte exigence.",
+    description: "22 ans d'expérience cumulée sur des opérations techniques et multi-sites.",
   },
   {
     title: "Secteurs",
-    description: "Télécommunications, énergie, agriculture, élevage.",
+    description: "Télécommunications, énergie, agriculture et élevage.",
   },
   {
     title: "Couverture",
-    description: "Interventions multi-sites pilotées avec méthode.",
+    description: "Présence opérationnelle dans les 14 régions du Sénégal.",
   },
   {
     title: "Exécution",
-    description: "Déploiement rigoureux et suivi opérationnel.",
+    description: "Audit, déploiement, maintenance et support d'exploitation.",
   },
 ];
 
@@ -111,30 +124,30 @@ export const sectors: Sector[] = [
   {
     slug: "telecommunications",
     title: "Télécommunications",
-    heroTitle: "Solutions techniques pour les infrastructures télécoms",
+    heroTitle: "Ingénierie, déploiement et maintenance des infrastructures télécoms",
     description:
-      "Audit, déploiement et maintenance des réseaux télécoms.",
+      "Disponibilité réseau, fiabilité des équipements et continuité de service.",
     detailedHero:
-      "Une approche terrain pour sécuriser disponibilité, maintenance et continuité de service.",
+      "Yellix intervient sur les infrastructures télécoms pour sécuriser la disponibilité, la qualité de déploiement et la maintenance des installations.",
     accent: "#2F6BFF",
     icon: "radio",
     focus: [
       "Disponibilité réseau",
-      "Qualité d’infrastructure",
+      "Fiabilité des équipements",
       "Continuité de service",
     ],
     challenges: [
       "Disponibilité réseau",
       "Fiabilité des équipements",
-      "Qualité de déploiement",
-      "Continuité de service",
+      "Qualité d'installation",
+      "Maintenance préventive et corrective",
     ],
     interventions: [
       "Audit des installations",
-      "Ingénierie réseau",
-      "Déploiement d’infrastructures",
+      "Ingénierie et préparation des déploiements",
+      "Déploiement d’infrastructures et mise en service",
       "Maintenance préventive et corrective",
-      "Support technique",
+      "Support opérationnel",
     ],
     relatedServices: ["Audit", "Ingénierie", "Déploiement", "Maintenance", "Support"],
     ctaLabel: "Parlez-nous de votre besoin télécom",
@@ -142,21 +155,21 @@ export const sectors: Sector[] = [
   {
     slug: "energie",
     title: "Énergie",
-    heroTitle: "Accompagnement technique pour les projets énergétiques",
+    heroTitle: "Ingénierie et suivi opérationnel des projets énergétiques",
     description:
-      "Étude, déploiement et suivi des projets énergétiques.",
+      "Fiabilité des installations, sécurité d'exploitation et continuité de service.",
     detailedHero:
-      "Une intervention cadrée pour fiabiliser les installations et soutenir l’exploitation.",
+      "Yellix accompagne les projets énergétiques par une lecture technique des installations, un déploiement cadré et un suivi orienté exploitation.",
     accent: "#F5A623",
     icon: "batteryCharging",
-    focus: ["Fiabilité des installations", "Performance", "Sécurité opérationnelle"],
-    challenges: ["Fiabilité des installations", "Performance", "Sécurité", "Exploitation"],
+    focus: ["Fiabilité des installations", "Sécurité d'exploitation", "Performance des équipements"],
+    challenges: ["Fiabilité des installations", "Sécurité d'exploitation", "Performance", "Continuité de service"],
     interventions: [
-      "Audit technique",
-      "Ingénierie des solutions",
-      "Déploiement opérationnel",
-      "Maintenance",
-      "Exploitation et support",
+      "Audit technique des sites",
+      "Ingénierie et dimensionnement",
+      "Déploiement et mise en service",
+      "Maintenance des installations",
+      "Support à l'exploitation",
     ],
     relatedServices: [
       "Audit",
@@ -171,20 +184,20 @@ export const sectors: Sector[] = [
   {
     slug: "agriculture",
     title: "Agriculture",
-    heroTitle: "Solutions techniques et opérationnelles pour l’agriculture",
+    heroTitle: "Appui technique aux équipements et opérations agricoles",
     description:
-      "Ingénierie, maintenance et conseil pour les exploitations.",
+      "Performance des équipements, continuité des opérations et adaptation au contexte d'exploitation.",
     detailedHero:
-      "Des solutions utiles au terrain, pensées pour la continuité et la performance.",
+      "Yellix intervient sur les équipements et infrastructures agricoles avec une approche centrée sur la continuité, la fiabilité et l'appui opérationnel.",
     accent: "#2E8B57",
     icon: "sprout",
-    focus: ["Performance des exploitations", "Fiabilité des équipements", "Adaptation terrain"],
-    challenges: ["Performance", "Fiabilité des équipements", "Adaptation terrain", "Conseil"],
+    focus: ["Performance des équipements", "Continuité d'exploitation", "Adaptation au contexte terrain"],
+    challenges: ["Disponibilité des équipements", "Continuité d'exploitation", "Adaptation au contexte terrain", "Appui technique"],
     interventions: [
-      "Ingénierie adaptée",
-      "Optimisation opérationnelle",
-      "Maintenance d’équipements",
-      "Support et conseil",
+      "Audit des besoins et des équipements",
+      "Ingénierie et adaptation des solutions",
+      "Maintenance des équipements",
+      "Support technique et conseil",
     ],
     relatedServices: ["Ingénierie", "Maintenance", "Support", "Conseil"],
     ctaLabel: "Parlez-nous de votre besoin agriculture",
@@ -192,21 +205,21 @@ export const sectors: Sector[] = [
   {
     slug: "elevage",
     title: "Élevage",
-    heroTitle: "Accompagnement technique pour les activités d’élevage",
+    heroTitle: "Maintenance et support des activités d'élevage",
     description:
-      "Support terrain pour la continuité et la productivité.",
+      "Continuité d'exploitation, maintenance des installations et support opérationnel.",
     detailedHero:
-      "Une réponse simple et pragmatique pour maintenir les installations et l’activité.",
+      "Yellix accompagne les activités d'élevage sur les enjeux d'installation, de maintenance et de support pour sécuriser l'activité.",
     accent: "#7C9A3D",
     icon: "shield",
-    focus: ["Continuité de service", "Productivité", "Support terrain"],
-    challenges: ["Continuité", "Productivité", "Maintenance", "Support terrain"],
+    focus: ["Continuité d'exploitation", "Maintenance des installations", "Support opérationnel"],
+    challenges: ["Continuité d'exploitation", "Maintenance", "Disponibilité des installations", "Support terrain"],
     interventions: [
       "Audit des besoins",
-      "Solutions adaptées",
+      "Définition de solutions adaptées",
       "Maintenance des installations",
-      "Support terrain",
-      "Conseil",
+      "Support opérationnel",
+      "Conseil technique",
     ],
     relatedServices: ["Audit", "Maintenance", "Support", "Conseil"],
     ctaLabel: "Parlez-nous de votre besoin élevage",
@@ -305,41 +318,66 @@ export const services: Service[] = [
       "Cadrage",
     ],
   },
+  {
+    slug: "fourniture-equipements-solaires",
+    title: "Fourniture d'équipements solaires",
+    icon: "batteryCharging",
+    summary:
+      "Approvisionnement en modules, batteries, régulateurs et accessoires.",
+    value: "Sécuriser la disponibilité des équipements solaires.",
+    useCases: [
+      "Modules",
+      "Batteries",
+      "Régulateurs",
+    ],
+  },
+  {
+    slug: "installation-solaire",
+    title: "Installation solaire",
+    icon: "wrench",
+    summary:
+      "Pose, raccordement et mise en service des installations photovoltaïques.",
+    value: "Déployer des solutions solaires prêtes à l'exploitation.",
+    useCases: [
+      "Pose",
+      "Raccordement",
+      "Mise en service",
+    ],
+  },
 ];
 
 export const servicePillars: ServicePillar[] = [
   {
-    title: "Concevoir",
-    description: "Audit, ingénierie et conseil pour cadrer correctement les besoins.",
+    title: "Cadrer",
+    description: "Audit, analyse et ingénierie pour qualifier l'existant et définir le périmètre.",
   },
   {
-    title: "Déployer",
-    description:
-      "Déploiement et exploitation avec une logique de qualité, de coordination et de terrain.",
+    title: "Exécuter",
+    description: "Déploiement et mise en service avec coordination, qualité et pilotage terrain.",
   },
   {
     title: "Maintenir",
-    description: "Maintenance et support pour assurer la continuité et limiter les interruptions.",
+    description: "Maintenance, support et suivi d'exploitation pour sécuriser la continuité.",
   },
 ];
 
 export const whyYellix = [
   {
-    title: "Lecture sectorielle",
+    title: "Lecture technique et sectorielle",
     description:
-      "Une compréhension croisée des télécommunications, de l’énergie, de l’agriculture et de l’élevage.",
+      "Qualifier les contraintes d'exploitation et cadrer la réponse attendue.",
     icon: "layers3" as IconName,
   },
   {
-    title: "Déploiement maîtrisé",
+    title: "Coordination d'exécution",
     description:
-      "Des interventions coordonnées avec suivi opérationnel et exigence d’exécution.",
+      "Orchestrer les opérations avec méthode, qualité et maîtrise terrain.",
     icon: "route" as IconName,
   },
   {
-    title: "Suivi durable",
+    title: "Suivi d'exploitation",
     description:
-      "Maintenance, support et accompagnement pour sécuriser les opérations dans le temps.",
+      "Préserver la disponibilité des installations et la continuité d'activité.",
     icon: "leaf" as IconName,
   },
 ];
@@ -347,27 +385,22 @@ export const whyYellix = [
 export const values = [
   {
     title: "Rigueur",
-    description: "Une méthode claire et suivie.",
     icon: "target" as IconName,
   },
   {
     title: "Engagement",
-    description: "Une implication forte sur le terrain.",
     icon: "shieldCheck" as IconName,
   },
   {
     title: "Fiabilité",
-    description: "Des interventions stables et robustes.",
     icon: "network" as IconName,
   },
   {
     title: "Proximité",
-    description: "Une approche simple, proche du terrain.",
     icon: "handshake" as IconName,
   },
   {
     title: "Performance",
-    description: "Une recherche d’efficacité durable.",
     icon: "trendingUp" as IconName,
   },
 ];

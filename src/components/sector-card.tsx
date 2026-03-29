@@ -16,9 +16,9 @@ export function SectorCard({ sector, compact = false }: SectorCardProps) {
     <Link
       href={`/secteurs/${sector.slug}`}
       className={cn(
-        "group flex h-full flex-col border border-[var(--color-border)] bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(247,249,252,0.92))] transition duration-300 hover:-translate-y-1 hover:border-[var(--color-border-strong)] hover:shadow-[0_22px_56px_rgba(8,19,31,0.1)]",
+        "group relative flex h-full flex-col border border-[var(--color-border)] bg-white transition duration-300 hover:-translate-y-0.5 hover:border-[var(--color-border-strong)] hover:shadow-[0_18px_42px_rgba(8,19,31,0.08)]",
         compact
-          ? "rounded-[22px] p-4 shadow-[0_14px_32px_rgba(8,19,31,0.055)] md:p-[1.125rem]"
+          ? "rounded-[18px] p-[1.125rem] shadow-[0_10px_24px_rgba(8,19,31,0.045)]"
           : "rounded-[26px] p-5 shadow-[0_16px_44px_rgba(8,19,31,0.06)] md:p-6",
       )}
     >
@@ -26,7 +26,7 @@ export function SectorCard({ sector, compact = false }: SectorCardProps) {
         <span
           className={cn(
             "inline-flex shrink-0 items-center justify-center border shadow-[0_10px_28px_rgba(8,19,31,0.06)]",
-            compact ? "h-8 w-8 rounded-[15px]" : "h-10 w-10 rounded-[18px]",
+            compact ? "h-8 w-8 rounded-[12px]" : "h-10 w-10 rounded-[18px]",
           )}
           style={{
             color: sector.accent,
@@ -45,11 +45,15 @@ export function SectorCard({ sector, compact = false }: SectorCardProps) {
         />
       </div>
 
-      <div className={cn(compact ? "mt-2.5 space-y-1.5" : "mt-4 space-y-2.5")}>
+      <div
+        className={cn(
+          compact ? "mt-2.5 space-y-1.5" : "mt-4 space-y-2.5",
+        )}
+      >
         <h3
           className={cn(
             "leading-[1.08]",
-            compact ? "text-[1.26rem] md:text-[1.38rem]" : "text-[1.45rem] md:text-[1.6rem]",
+            compact ? "text-[1.16rem] md:text-[1.22rem]" : "text-[1.45rem] md:text-[1.6rem]",
           )}
         >
           {sector.title}
@@ -58,7 +62,7 @@ export function SectorCard({ sector, compact = false }: SectorCardProps) {
           className={cn(
             "text-[var(--color-slate)]",
             compact
-              ? "max-w-[18.5rem] text-[0.88rem] leading-[1.55]"
+              ? "max-w-[19rem] text-[0.84rem] leading-[1.55]"
               : "max-w-[18rem] text-[0.94rem] leading-6",
           )}
         >
@@ -69,7 +73,7 @@ export function SectorCard({ sector, compact = false }: SectorCardProps) {
       <ul
         className={cn(
           "text-[var(--color-slate)]",
-          compact ? "mt-2.5 space-y-1 text-[12px] leading-[1.45]" : "mt-4 space-y-2 text-[13px] leading-5",
+          compact ? "mt-2.5 space-y-1 text-[11.5px] leading-[1.5]" : "mt-4 space-y-2 text-[13px] leading-5",
         )}
       >
         {sector.focus.slice(0, 2).map((item) => (
@@ -81,16 +85,16 @@ export function SectorCard({ sector, compact = false }: SectorCardProps) {
               className="mt-[0.4rem] h-1.5 w-1.5 shrink-0 rounded-full"
               style={{ backgroundColor: sector.accent }}
             />
-            <span>{item}</span>
-          </li>
-        ))}
+          <span>{item}</span>
+        </li>
+      ))}
       </ul>
 
       <div className={cn("mt-auto", compact ? "pt-2.5" : "pt-4")}>
         <div
           className={cn(
             "inline-flex items-center gap-2 font-semibold text-[var(--color-midnight)]",
-            compact ? "text-[13px]" : "text-sm",
+            compact ? "text-[12px] tracking-[0.02em]" : "text-sm",
           )}
         >
           En savoir plus

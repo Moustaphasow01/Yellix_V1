@@ -120,12 +120,12 @@
     align-items: center;
     gap: 0.625rem;
     border-radius: 999px;
-    border: 1px solid rgba(0, 191, 165, 0.2);
-    background: rgba(0, 191, 165, 0.08);
-    padding: 0.45rem 0.8rem;
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.14em;
+    border: 1px solid rgba(0, 191, 165, 0.16);
+    background: transparent;
+    padding: 0.4rem 0.78rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--color-accent);
   }

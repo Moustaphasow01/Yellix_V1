@@ -1,22 +1,23 @@
 import type { MetadataRoute } from "next";
-import { sectors, siteNavigation } from "@/data/site";
+import { siteNavigation } from "@/data/site";
+
+export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.yellix.com";
 
-  const staticRoutes = siteNavigation.map((item) => ({
-    url: `${siteUrl}${item.href === "/" ? "" : item.href}`,
+  const staticRouteHrefs = new Set(
+    [...siteNavigation, { label: "Contact", href: "/contact" }].map(
+      (item) => item.href.split("#")[0] || "/",
+    ),
+  );
+
+  const staticRoutes = [...staticRouteHrefs].map((href) => ({
+    url: `${siteUrl}${href === "/" ? "" : href}`,
     lastModified: new Date(),
-    changeFrequency: item.href === "/" ? "weekly" : "monthly",
-    priority: item.href === "/" ? 1 : 0.7,
+    changeFrequency: href === "/" ? "weekly" : "monthly",
+    priority: href === "/" ? 1 : 0.7,
   })) as MetadataRoute.Sitemap;
 
-  const sectorRoutes = sectors.map((sector) => ({
-    url: `${siteUrl}/secteurs/${sector.slug}`,
-    lastModified: new Date(),
-    changeFrequency: "monthly",
-    priority: 0.64,
-  })) as MetadataRoute.Sitemap;
-
-  return [...staticRoutes, ...sectorRoutes];
+  return staticRoutes;
 }

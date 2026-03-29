@@ -14,6 +14,10 @@ type SiteHeaderProps = {
 };
 
 function isActive(pathname: string, href: string) {
+  if (href.startsWith("/#")) {
+    return pathname === "/";
+  }
+
   if (href === "/") {
     return pathname === href;
   }

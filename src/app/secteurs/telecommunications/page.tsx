@@ -1,8 +1,5 @@
-import { SectorDetailPage } from "@/components/sector-detail-page";
-import { sectors } from "@/data/site";
+import { redirect } from "next/navigation";
 import { createMetadata } from "@/lib/metadata";
-
-const sector = sectors.find((item) => item.slug === "telecommunications");
 
 export const metadata = createMetadata({
   title: "Télécommunications",
@@ -12,9 +9,5 @@ export const metadata = createMetadata({
 });
 
 export default function TelecommunicationsPage() {
-  if (!sector) {
-    return null;
-  }
-
-  return <SectorDetailPage sector={sector} />;
+  redirect("/");
 }
