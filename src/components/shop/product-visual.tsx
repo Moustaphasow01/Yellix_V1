@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { ShopProduct } from "@/data/shop";
+import { assetPath } from "@/lib/asset-path";
 
 type ProductVisualProps = {
   product: ShopProduct;
@@ -26,7 +27,7 @@ export function ProductVisual({
         : ratio === "thumbnail"
           ? "max-h-[78%] max-w-[78%]"
           : "max-h-[84%] max-w-[84%]";
-  const imageSrc = product.images[0] ?? `/shop/products/${product.slug}.jpg`;
+  const imageSrc = assetPath(product.images[0] ?? `/shop/products/${product.slug}.jpg`);
 
   return (
     <div
