@@ -50,7 +50,8 @@ export type ServicePillar = {
 
 export const siteNavigation: NavigationItem[] = [
   { label: "À propos", href: "/" },
-  { label: "Yellix Shop", href: "/shop" },
+  { label: "Shop", href: "/shop" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export const keyMetrics: Metric[] = [

@@ -33,7 +33,7 @@ const sectorCardMeta: SectorCardMeta = {
 
 export function HomeSectorShowcase() {
   return (
-    <section id="secteurs" className="py-0">
+    <section id="experience" className="py-0">
       <div className="w-full bg-[var(--color-panel-soft)] px-4 pt-4 pb-2 md:px-6 md:pt-5 md:pb-3 lg:px-7 lg:pt-5 lg:pb-4">
         <motion.div
           initial={{ opacity: 0, y: 18 }}

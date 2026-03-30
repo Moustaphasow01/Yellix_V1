@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans, Sora } from "next/font/google";
 import "./globals.css";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { ShopProvider } from "@/components/shop/shop-provider";
 import { siteNavigation } from "@/data/site";
 
 const headingFont = Sora({
@@ -81,13 +82,15 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
-        <div className="relative flex min-h-screen flex-col">
-          <SiteHeader items={siteNavigation} />
-          <main id="contenu" className="flex-1">
-            {children}
-          </main>
-          <SiteFooter />
-        </div>
+        <ShopProvider>
+          <div className="relative flex min-h-screen flex-col">
+            <SiteHeader items={siteNavigation} />
+            <main id="contenu" className="flex-1">
+              {children}
+            </main>
+            <SiteFooter />
+          </div>
+        </ShopProvider>
       </body>
     </html>
   );
