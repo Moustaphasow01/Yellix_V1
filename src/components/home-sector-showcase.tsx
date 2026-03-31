@@ -45,17 +45,9 @@ export function HomeSectorShowcase() {
           <div className="grid lg:grid-cols-[minmax(18rem,0.72fr)_minmax(0,1.18fr)]">
             <div className="border-b border-[var(--color-border)] px-5 py-4 md:px-6 md:py-5 lg:border-b-0 lg:border-r lg:px-7 lg:py-6">
               <Reveal>
-                <div className="max-w-[21rem] space-y-2.5">
+                <div className="max-w-[21rem] space-y-3">
                   <span className="section-label">Nos services</span>
-                  <p className="text-[0.8rem] leading-5 text-[var(--color-slate)]">
-                    Yellix applique un cadre d&apos;audit, de déploiement, de maintenance et de
-                    support commun, ajusté aux contraintes opérationnelles de chaque secteur.
-                  </p>
-                  <p className="text-[0.76rem] leading-5 text-[var(--color-slate)]">
-                    Un même cadre d&apos;intervention pour sécuriser l&apos;exploitation, accélérer le
-                    déploiement et fiabiliser les opérations.
-                  </p>
-                  <div className="grid gap-1.5 pt-1.5">
+                  <div className="grid gap-1.5 pt-1">
                     {services.map((service) => {
                       const Icon = iconMap[service.icon];
 

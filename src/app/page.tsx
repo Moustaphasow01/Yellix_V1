@@ -1,11 +1,10 @@
 import { ButtonLink } from "@/components/button-link";
 import { Reveal } from "@/components/reveal";
-import { Check } from "lucide-react";
 import Image from "next/image";
 import { createMetadata } from "@/lib/metadata";
 import { iconMap } from "@/lib/icon-map";
 import { assetPath } from "@/lib/asset-path";
-import { heroCapabilities, servicePillars, whyYellix } from "@/data/site";
+import { servicePillars, whyYellix } from "@/data/site";
 import { HomeSectorShowcase } from "@/components/home-sector-showcase";
 
 export const metadata = createMetadata({
@@ -30,8 +29,8 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,19,31,0.82)_0%,rgba(8,19,31,0.74)_26%,rgba(8,19,31,0.56)_56%,rgba(8,19,31,0.18)_100%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_24%,rgba(255,255,255,0.06),transparent_22%)]" />
-        <div className="container-shell relative z-10 grid gap-8 md:gap-10 lg:grid-cols-[minmax(0,1.82fr)_minmax(21rem,0.88fr)] lg:items-start lg:gap-6">
-          <Reveal className="space-y-8 lg:pr-2">
+        <div className="container-shell relative z-10">
+          <Reveal className="max-w-[48rem] space-y-8 lg:pr-2">
             <div className="max-w-[48rem] space-y-5 md:space-y-6">
               <span className="section-label">Depuis 1999</span>
               <h1 className="max-w-[13ch] text-[clamp(39px,4.2vw,64px)] leading-[0.95] text-white">
@@ -43,42 +42,6 @@ export default function Home() {
                 auditer, déployer et maintenir des opérations techniques dans les
                 télécommunications, l&apos;énergie, l&apos;agriculture et l&apos;élevage.
               </p>
-            </div>
-          </Reveal>
-
-          <Reveal delay={0.1} className="lg:justify-self-end">
-            <div className="w-full max-w-[22.5rem] rounded-[18px] border border-white/10 bg-[linear-gradient(180deg,rgba(7,15,25,0.92),rgba(9,19,30,0.82))] p-4 shadow-[0_24px_60px_rgba(3,8,16,0.3)] lg:-translate-y-1">
-              <div className="flex items-center gap-3">
-                <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-white/52">
-                  Capacités clés
-                </p>
-                <span className="h-px flex-1 bg-white/12" />
-              </div>
-
-              <div className="mt-3 rounded-[14px] border border-white/10 bg-[rgba(255,255,255,0.02)] px-3 py-1.5">
-                <ul>
-                  {heroCapabilities.map((item, index) => (
-                    <li
-                      key={item.title}
-                      className={`flex gap-2.5 py-3 ${
-                        index < heroCapabilities.length - 1 ? "border-b border-white/10" : ""
-                      }`}
-                    >
-                      <span className="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-[10px] border border-white/10 bg-white/[0.04] text-[var(--color-accent)]">
-                        <Check className="h-3 w-3" />
-                      </span>
-                      <div className="space-y-1">
-                        <p className="text-[0.88rem] font-semibold leading-5 text-white">
-                          {item.title}
-                        </p>
-                        <p className="max-w-md text-[12px] leading-5 text-white/62">
-                          {item.description}
-                        </p>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              </div>
             </div>
           </Reveal>
         </div>
