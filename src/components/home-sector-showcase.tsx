@@ -45,7 +45,7 @@ export function HomeSectorShowcase() {
           <div className="grid lg:grid-cols-[minmax(18rem,0.72fr)_minmax(0,1.18fr)]">
             <div className="border-b border-[var(--color-border)] px-5 py-4 md:px-6 md:py-5 lg:border-b-0 lg:border-r lg:px-7 lg:py-6">
               <Reveal>
-                <div className="max-w-[21rem] space-y-3">
+                <div className="w-full space-y-3">
                   <span className="section-label">Nos services</span>
                   <div className="grid gap-1.5 pt-1">
                     {services.map((service) => {
