@@ -61,7 +61,7 @@ export function HomeSectorShowcase() {
                           <span className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-[9px] border border-[var(--color-border)] bg-[var(--color-ivory)] text-[var(--color-accent)] transition duration-200 group-hover:rotate-6">
                             <Icon className="h-2.5 w-2.5" />
                           </span>
-                          <span className="text-[9px] font-semibold uppercase tracking-[0.12em] text-[var(--color-midnight)]">
+                          <span className="text-[10.5px] font-semibold uppercase tracking-[0.12em] text-[var(--color-midnight)]">
                             {service.title}
                           </span>
                         </motion.div>
