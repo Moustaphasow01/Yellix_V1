@@ -168,26 +168,26 @@ export function SiteHeader({ items }: SiteHeaderProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-40 bg-[rgba(8,19,31,0.96)] px-6 pb-8 pt-28 lg:hidden"
+            className="fixed inset-0 z-40 bg-[rgba(8,19,31,0.985)] px-4 pb-5 pt-[4.85rem] backdrop-blur-xl lg:hidden"
           >
             <motion.div
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 24 }}
               transition={{ duration: 0.25 }}
-              className="mx-auto flex h-full max-w-xl flex-col rounded-[32px] border border-white/10 bg-white/5 p-6"
+              className="mx-auto flex h-full max-w-xl flex-col rounded-[28px] border border-white/12 bg-[linear-gradient(180deg,rgba(11,22,35,0.98),rgba(8,19,31,0.96))] p-4 shadow-[0_24px_64px_rgba(3,8,16,0.34)]"
             >
-              <div className="space-y-2">
+              <div className="space-y-2.5">
                 {items.map((item) => (
                   <Link
                     key={item.href}
                     href={item.href}
                     onClick={() => setIsMenuOpen(false)}
                     className={cn(
-                      "block rounded-[22px] px-4 py-4 text-base font-medium transition duration-200",
+                      "block rounded-[20px] border px-4 py-3.5 text-[0.98rem] font-medium transition duration-200",
                       isActive(pathname, item.href, activeHash)
-                        ? "bg-white/10 text-white"
-                        : "text-white/72 hover:bg-white/7 hover:text-white",
+                        ? "border-white/14 bg-white/[0.14] text-white shadow-[0_10px_28px_rgba(3,8,16,0.18)]"
+                        : "border-transparent bg-white/[0.04] text-white/92 hover:border-white/10 hover:bg-white/[0.08] hover:text-white",
                     )}
                   >
                     {item.label}
@@ -195,7 +195,7 @@ export function SiteHeader({ items }: SiteHeaderProps) {
                 ))}
               </div>
 
-              <div className="mt-5 grid grid-cols-4 gap-2">
+              <div className="mt-5 grid grid-cols-4 gap-2.5">
                 {utilityLinks.map((item) => {
                   const Icon = item.icon;
 
@@ -205,8 +205,8 @@ export function SiteHeader({ items }: SiteHeaderProps) {
                       href={item.href}
                       onClick={() => setIsMenuOpen(false)}
                       className={cn(
-                        "relative flex h-12 items-center justify-center rounded-[18px] border border-white/14 bg-white/[0.11] text-white transition duration-200 hover:border-white/22 hover:bg-white/[0.18]",
-                        item.active && "border-white/18 bg-white/[0.16] text-white",
+                        "relative flex h-12 items-center justify-center rounded-[18px] border border-white/18 bg-white/[0.09] text-white transition duration-200 hover:border-white/24 hover:bg-white/[0.16]",
+                        item.active && "border-white/24 bg-white/[0.18] text-white",
                       )}
                       aria-label={item.label}
                     >
@@ -221,11 +221,11 @@ export function SiteHeader({ items }: SiteHeaderProps) {
                 })}
               </div>
 
-              <div className="mt-auto space-y-4 rounded-[28px] border border-white/10 bg-[rgba(255,255,255,0.04)] p-5">
-                <p className="text-sm font-medium uppercase tracking-[0.22em] text-white/45">
+              <div className="mt-auto space-y-4 rounded-[24px] border border-white/12 bg-[rgba(255,255,255,0.06)] p-5">
+                <p className="text-sm font-medium uppercase tracking-[0.22em] text-white/52">
                   Yellix Group
                 </p>
-                <p className="text-sm leading-7 text-white/70">
+                <p className="text-sm leading-7 text-white/82">
                   Shop, devis et parcours corporate reunis dans une meme experience sobre et
                   technique.
                 </p>

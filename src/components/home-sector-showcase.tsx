@@ -42,7 +42,7 @@ export function HomeSectorShowcase() {
           transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
           className="overflow-hidden rounded-[24px] border border-[var(--color-border)] bg-white shadow-[0_16px_40px_rgba(8,19,31,0.05)]"
         >
-          <div className="grid lg:grid-cols-[minmax(18rem,0.72fr)_minmax(0,1.18fr)]">
+          <div className="grid lg:grid-cols-[25rem_minmax(0,1fr)]">
             <div className="border-b border-[var(--color-border)] px-5 py-4 md:px-6 md:py-5 lg:border-b-0 lg:border-r lg:px-7 lg:py-6">
               <Reveal>
                 <div className="w-full space-y-3">

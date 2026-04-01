@@ -23,7 +23,7 @@ export function PageHero({
   const showPanel = Boolean(children) || highlights.length > 0;
 
   return (
-    <section className="relative overflow-hidden bg-[var(--color-midnight)] pb-14 pt-24 text-white md:pb-16 md:pt-28 lg:pb-[4.5rem] lg:pt-32">
+    <section className="relative overflow-hidden bg-[var(--color-midnight)] pb-14 pt-28 text-white md:pb-16 md:pt-28 lg:pb-[4.5rem] lg:pt-32">
       <div className="tech-grid-dark absolute inset-0 opacity-20" />
       <div className="absolute -left-8 top-0 h-64 w-64 rounded-full bg-[rgba(0,191,165,0.08)] blur-[110px]" />
       <div

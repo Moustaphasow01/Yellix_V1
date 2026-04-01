@@ -16,7 +16,7 @@ export const metadata = createMetadata({
 export default function Home() {
   return (
     <>
-      <section className="relative min-h-[100svh] overflow-hidden bg-[var(--color-midnight)] pb-12 pt-16 text-white md:pb-[72px] md:pt-[96px] lg:pb-[88px] lg:pt-[120px]">
+      <section className="relative min-h-[100svh] overflow-hidden bg-[var(--color-midnight)] pb-12 pt-[5.5rem] text-white md:pb-[72px] md:pt-[96px] lg:pb-[88px] lg:pt-[120px]">
         <div className="tech-grid-dark absolute inset-0 opacity-25" />
         <div className="absolute -top-8 left-0 h-72 w-72 rounded-full bg-[rgba(0,191,165,0.05)] blur-[110px] md:-top-10 md:h-[22rem] md:w-[22rem]" />
         <Image
@@ -25,22 +25,22 @@ export default function Home() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[18%_40%] opacity-100 brightness-95 contrast-120 saturate-110"
+          className="scale-[1.02] object-cover object-[24%_42%] opacity-100 brightness-[0.88] contrast-[1.08] saturate-[1.04] md:object-[28%_42%] lg:object-[31%_44%]"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,19,31,0.82)_0%,rgba(8,19,31,0.74)_26%,rgba(8,19,31,0.56)_56%,rgba(8,19,31,0.18)_100%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_24%,rgba(255,255,255,0.06),transparent_22%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(92deg,rgba(8,19,31,0.9)_0%,rgba(8,19,31,0.82)_24%,rgba(8,19,31,0.6)_48%,rgba(8,19,31,0.22)_72%,rgba(8,19,31,0.08)_100%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_18%,rgba(79,170,255,0.22),transparent_28%),radial-gradient(circle_at_18%_82%,rgba(255,176,64,0.12),transparent_26%)]" />
         <div className="container-shell relative z-10">
-          <Reveal className="max-w-[48rem] space-y-8 lg:pr-2">
-            <div className="max-w-[48rem] space-y-5 md:space-y-6">
+          <Reveal className="max-w-[42rem] space-y-6 lg:pr-2">
+            <div className="max-w-[40rem] space-y-4 md:space-y-5">
               <span className="section-label">Depuis 1999</span>
-              <h1 className="max-w-[13ch] text-[clamp(39px,4.2vw,64px)] leading-[0.95] text-white">
+              <h1 className="max-w-[10.8ch] text-[clamp(35px,4vw,60px)] leading-[0.94] text-white">
                 <span className="block">L&apos;ingénierie</span>
                 <span className="block">au service de la performance</span>
               </h1>
-              <p className="max-w-[39rem] text-[0.96rem] leading-7 text-white/72 md:text-[1rem]">
-                Yellix Group intervient auprès des acteurs publics, privés et institutionnels pour
-                auditer, déployer et maintenir des opérations techniques dans les
-                télécommunications, l&apos;énergie, l&apos;agriculture et l&apos;élevage.
+              <p className="max-w-[31rem] text-[0.93rem] leading-[1.72] text-white/78 md:text-[0.98rem]">
+                Yellix Group accompagne les acteurs publics, privés et institutionnels pour
+                auditer, déployer et maintenir des opérations techniques en télécommunications,
+                énergie, agriculture et élevage.
               </p>
             </div>
           </Reveal>

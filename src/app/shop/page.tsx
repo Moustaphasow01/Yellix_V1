@@ -12,7 +12,7 @@ export const metadata = createMetadata({
 export default function ShopPage() {
   return (
     <>
-      <section className="pb-10 pt-14 md:pb-12 md:pt-18 lg:pb-14 lg:pt-20">
+      <section className="pb-10 pt-20 md:pb-12 md:pt-18 lg:pb-14 lg:pt-20">
         <div className="container-shell">
           <ShopProductListing
             products={shopProducts}
